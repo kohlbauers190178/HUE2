@@ -1,3 +1,8 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
 public class NumberTester {
 
     String fileName;
@@ -21,7 +26,36 @@ public class NumberTester {
         this.palindromeTester = palindromeTester;
     }
 
-    public void testFile(){
+    public void testFile() {
+
+        try {
+            Scanner reader = new Scanner(fileName);
+            String line;
+            reader.nextLine();
+            while (reader.hasNextLine()) {
+                line = reader.nextLine();
+                String[] parts = line.split(" ");
+
+                if (parts.length > 1) {
+                    switch (Integer.parseInt(parts[0])) {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            System.out.println("ERROR at reading file "+fileName+"; line: "+line);
+
+                    }
+                }
+
+            }
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
