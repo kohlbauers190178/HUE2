@@ -1,6 +1,3 @@
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.Scanner;
 
 public class NumberTester {
@@ -37,15 +34,19 @@ public class NumberTester {
                 String[] parts = line.split(" ");
 
                 if (parts.length > 1) {
+                    int numberToBeTested = Integer.parseInt(parts[1]);
+                    int result;
                     switch (Integer.parseInt(parts[0])) {
                         case 1:
+
                             break;
                         case 2:
+
                             break;
                         case 3:
                             break;
                         default:
-                            System.out.println("ERROR at reading file "+fileName+"; line: "+line);
+                            System.out.println("ERROR at reading file " + fileName + "; line: " + line);
 
                     }
                 }
