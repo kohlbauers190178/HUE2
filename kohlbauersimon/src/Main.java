@@ -11,10 +11,10 @@ public class Main {
         NumberTest isPrime = (p) -> {
             for (int i = 2; i <= p / 2; ++i) {
                 if (p % i == 0) {
-                    return true;
+                    return false;
                 }
             }
-            return false;
+            return true;
         };
         NumberTest isPalindrome = (p) -> {
 
@@ -27,14 +27,13 @@ public class Main {
                 number = number/10;
             }
 
-            if(reverse == p){
-                return true;
-            }
-            return false;
+            return reverse == p;
         };
 
         numberTester.setOddEvenTester(isEven);
         numberTester.setPrimeTester(isPrime);
         numberTester.setPalindromeTester(isPalindrome);
+
+        numberTester.testFile();
     }
 }
