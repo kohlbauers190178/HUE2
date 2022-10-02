@@ -9,8 +9,6 @@ public abstract class AbstractCalculator {
         this.subtract = subtract;
         this.multiply = multiply;
         this.divide = divide;
-
-
     }
 
     public abstract Number add(Number a, Number b);

@@ -9,10 +9,7 @@ public class RationalCalculator extends AbstractCalculator{
     }
 
     @Override
-    public Number subtract(Number a, Number b) {
-        return this.subtract.calc(a,b);
-
-    }
+    public Number subtract(Number a, Number b) {return this.subtract.calc(a,b);}
 
     @Override
     public Number multiply(Number a, Number b) {
